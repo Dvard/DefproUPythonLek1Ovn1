@@ -1,9 +1,7 @@
-from math import modf
-
 raw_minutes = int(input('Hur många minuter? '))
-minutes, hours = modf(raw_minutes / 60)
 
-minutes *= 60
+minutes = raw_minutes % 60
+hours = (raw_minutes / 60) - (minutes / 60)
 
 hours, minutes = int(hours), int(minutes)
 
